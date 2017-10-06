@@ -1,0 +1,36 @@
+{
+  "name": "seal-assert-mongo-error",
+  "version": "0.0.0",
+  "description": "Throws on a servere mongodb error.",
+  "author": {
+    "name": "SEAL Systems AG",
+    "email": "opensource@sealsystems.de",
+    "url": "https://www.sealsystems.de"
+  },
+  "license": "MIT",
+  "scripts": {
+    "bot": "bot",
+    "release": "bot release && npm publish",
+    "release-minor": "bot release --type minor && npm publish",
+    "release-major": "bot release --type major && npm publish",
+    "test": "bot test-units",
+    "coverage": "istanbul cover _mocha -- --recursive --ui tdd ",
+    "report": "npm run coverage && if [[ $OSTYPE == darwin* ]]; then open=open; else open=xdg-open; fi && $open coverage/lcov-report/index.html",
+    "generate-cert": "bot generate-cert",
+    "show-cert": "bot show-cert"
+  },
+  "main": "lib/assertMongoError.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "assertthat": "0.10.3",
+    "eslint-config-seal": "0.0.9",
+    "mockery": "2.1.0",
+    "roboter": "0.15.4",
+    "roboter-server": "0.15.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sealsystems/seal-assert-mongo-error.git"
+  }
+}
