@@ -20,14 +20,13 @@
     "show-cert": "bot show-cert"
   },
   "main": "lib/assertMongoError.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "assertthat": "0.10.3",
+    "assertthat": "1.0.0",
     "eslint-config-seal": "0.0.9",
     "mockery": "2.1.0",
-    "roboter": "0.15.4",
-    "roboter-server": "0.15.4"
+    "roboter": "0.16.0",
+    "roboter-server": "0.16.0"
   },
   "repository": {
     "type": "git",
