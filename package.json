@@ -1,5 +1,5 @@
 {
-  "name": "seal-assert-mongo-error",
+  "name": "@sealsystems/assert-mongo-error",
   "version": "0.0.1",
   "description": "Throws on a servere mongodb error.",
   "author": {
@@ -31,6 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sealsystems/seal-assert-mongo-error.git"
+    "url": "https://github.com/sealsystems/node-assert-mongo-error.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

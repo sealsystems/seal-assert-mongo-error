@@ -1,4 +1,7 @@
-# seal-assert-mongo-error
+# @sealsystems/assert-mongo-error
+
+[![CircleCI](https://circleci.com/gh/sealsystems/node-assert-mongo-error.svg?style=svg)](https://circleci.com/gh/sealsystems/node-assert-mongo-error)
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/knnocd1ddkfbaou0?svg=true)](https://ci.appveyor.com/project/Plossys/node-assert-mongo-error)
 
 If called with a mongodb error of a predefined (severe error) code it throws the error.
 
@@ -24,15 +27,15 @@ Default list of mongodb error codes to throw:
 ## Installation
 
 ```bash
-$ npm install seal-assert-mongo-error
+$ npm install @sealsystems/assert-mongo-error
 ```
 
 ## Quick start
 
-First you need to add a reference to seal-assert-mongo-error within your application, then call the `assert` function in the callback of every mongodb call.
+First you need to add a reference to @sealsystems/assert-mongo-error within your application, then call the `assert` function in the callback of every mongodb call.
 
 ```javascript
-const assertMongoError = require('seal-assert-mongo-error');
+const assertMongoError = require('@sealsystems/assert-mongo-error');
 
 yourCollection.find({}, (findError, cursor) => {
   assertMongoError.assert(findError);
@@ -45,7 +48,7 @@ yourCollection.find({}, (findError, cursor) => {
 Use the `setCodes` function to set a new list of error codes. This needs to be done only once, e.g. at startup. The new list is available instantly throughout the whole node process.
 
 ```javascript
-const assertMongoError = require('seal-assert-mongo-error');
+const assertMongoError = require('@sealsystems/assert-mongo-error');
 
 assertMongoError.setCodes([1,2,3]);
 ...
