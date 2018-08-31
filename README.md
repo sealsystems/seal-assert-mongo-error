@@ -3,9 +3,9 @@
 [![CircleCI](https://circleci.com/gh/sealsystems/node-assert-mongo-error.svg?style=svg)](https://circleci.com/gh/sealsystems/node-assert-mongo-error)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/knnocd1ddkfbaou0?svg=true)](https://ci.appveyor.com/project/Plossys/node-assert-mongo-error)
 
-If called with a mongodb error of a predefined (severe error) code it throws the error.
+Test for a servere mongodb error and handle it by exiting the process, throwing a new generated `@sealsystems/error` error object or just ignore the error.
 
-Default list of mongodb error codes to throw:
+Default list of severe mongodb error codes to exit:
 
 | Name | Code |
 |---|---|
@@ -41,6 +41,26 @@ yourCollection.find({}, (findError, cursor) => {
   assertMongoError.assert(findError);
   ...
 });
+```
+
+## Assert Error
+
+Test for a servere mongodb error. The function has three outcomes:
+
+- In case of a severe mongodb error exit the process
+- Without any of the optional parameters the mongodb error is ignored and the function returns.
+- If at least an error message is given as second parameter it throws a new created error of type `@sealsystems/error`. The original mongodb error is chained to the new error.
+
+```javascript
+assertMongoError.assert(error, message, code, metadata);
+```
+
+Parameters:
+```
+error      object  mandatory  The error object to test
+message    string  optional   Message used for creating a new error object
+code       number  optional   Code used for creating a new error object
+metadata   object  optional   Metadata used for creating a new error object
 ```
 
 ## Set list of error codes

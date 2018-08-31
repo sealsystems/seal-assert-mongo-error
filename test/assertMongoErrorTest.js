@@ -20,6 +20,7 @@ suite('assertMongoError', () => {
       map: { 18: true },
       update () {
         codeUpdateCalled++;
+
         return updateError;
       }
     });
@@ -47,16 +48,24 @@ suite('assertMongoError', () => {
     done();
   });
 
-  test('throws on severe mongo error', (done) => {
+  test('calls exit on severe mongo error', (done) => {
     const testError = new Error('test error');
 
     testError.name = 'MongoError';
     testError.code = 18;
-    assert.that(() => {
-      assertMongoError.assert(testError);
-    }).is.throwing('test error');
-    assert.that(codeUpdateCalled).is.equalTo(0);
-    done();
+
+    const origExit = process.exit;
+
+    process.exit = (code) => {
+      process.exit = origExit;
+      assert.that(code).is.equalTo(1);
+      assert.that(codeUpdateCalled).is.equalTo(0);
+      done();
+    };
+
+    assertMongoError.assert(testError);
+    process.exit = origExit;
+    throw new Error('X');
   });
 
   test('is not throwing an error if code is not in list', (done) => {
@@ -69,6 +78,24 @@ suite('assertMongoError', () => {
     }).is.not.throwing();
     assert.that(codeUpdateCalled).is.equalTo(0);
     done();
+  });
+
+  test('throws new error if message is given', (done) => {
+    const origError = new Error('orig error');
+
+    origError.name = 'MongoError';
+    origError.code = 19;
+
+    try {
+      assertMongoError.assert(origError, 'Blöd gelaufen');
+      throw new Error('X');
+    } catch (err) {
+      assert.that(codeUpdateCalled).is.equalTo(0);
+      assert.that(err.message).is.equalTo('Blöd gelaufen');
+      assert.that(err.metadata.cause).is.equalTo({ code: 19, message: 'orig error', metadata: {} });
+
+      return done();
+    }
   });
 
   test('calls update in code map', (done) => {
