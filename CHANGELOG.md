@@ -1,3 +1,14 @@
+## 1.2.0 (2018-09-08)
+
+### Features
+
+
+#### Use semantic-release ([35e7799](https://github.com/sealsystems/node-assert-mongo-error/commit/35e7799))
+
+
+
+---
+
 ## 1.1.1 (2018-09-08)
 
 ### Bug Fixes
