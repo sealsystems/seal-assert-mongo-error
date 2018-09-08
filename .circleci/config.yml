@@ -11,8 +11,6 @@ x-environment: &environment
   GIT_COMMITTER_EMAIL: com.git@sealsystems.de
   GIT_COMMITTER_NAME: CircleCI Build
   LOG_LEVELS: fatal
-  NODE_VERSION: 8.9.4
-  TLS_UNPROTECTED: world
 
 jobs:
   test:
