@@ -1,3 +1,14 @@
+## 1.2.1 (2018-09-09)
+
+### Bug Fixes
+
+
+#### Include all needed files in Node.js module. ([be5175a](https://github.com/sealsystems/node-assert-mongo-error/commit/be5175a))
+
+
+
+---
+
 ## 1.2.0 (2018-09-08)
 
 ### Features
