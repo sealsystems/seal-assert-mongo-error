@@ -18,7 +18,7 @@ suite('assertMongoError', () => {
     });
     mockery.registerMock('./codeMap', {
       map: { 18: true },
-      update () {
+      update() {
         codeUpdateCalled++;
 
         return updateError;
@@ -73,9 +73,11 @@ suite('assertMongoError', () => {
 
     testError.name = 'MongoError';
     testError.code = 19;
-    assert.that(() => {
-      assertMongoError.assert(testError);
-    }).is.not.throwing();
+    assert
+      .that(() => {
+        assertMongoError.assert(testError);
+      })
+      .is.not.throwing();
     assert.that(codeUpdateCalled).is.equalTo(0);
     done();
   });
@@ -99,6 +101,7 @@ suite('assertMongoError', () => {
   });
 
   test('calls update in code map', (done) => {
+    // eslint-disable-next-line global-require
     const mockedAssertMongoError = require('../lib/assertMongoError');
 
     assert.that(mockedAssertMongoError.setCodes([42, 43, 44])).is.null();
@@ -108,6 +111,7 @@ suite('assertMongoError', () => {
   });
 
   test('returns the code update error', (done) => {
+    // eslint-disable-next-line global-require
     const mockedAssertMongoError = require('../lib/assertMongoError');
 
     updateError = new Error('update error');
