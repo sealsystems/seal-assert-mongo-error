@@ -16,7 +16,8 @@
     "test": "test-run",
     "test:coverage": "test-coverage",
     "test:coverage:check": "test-coverage-check",
-    "test:report": "test-report"
+    "test:report": "test-report",
+    "licenses": "license-checker --production --csv"
   },
   "main": "lib/assertMongoError.js",
   "dependencies": {
@@ -24,18 +25,17 @@
     "@sealsystems/log": "2.1.0"
   },
   "devDependencies": {
-    "@sealsystems/eslint-config-es": "3.5.3",
+    "@sealsystems/eslint-config-es": "3.5.4",
     "@sealsystems/mocha": "4.1.1",
     "@sealsystems/semantic-release": "4.0.12",
-    "mockery": "2.1.0",
-    "nyc": "14.1.1"
+    "mockery": "2.1.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/sealsystems/node-assert-mongo-error.git"
   },
   "release": {
-    "extends": "@sealsystems/semantic-release-config/node-module"
+    "extends": "@sealsystems/semantic-release/node-module"
   },
   "publishConfig": {
     "access": "public"
