@@ -1,3 +1,14 @@
+## 1.2.2 (2019-10-05)
+
+### Chores
+
+
+#### bump [@sealsystems](https://github.com/sealsystems)/log from 1.2.4 to 2.1.0 ([4ae085d](https://github.com/sealsystems/node-assert-mongo-error/commit/4ae085d))
+
+
+
+---
+
 ## 1.2.1 (2018-09-09)
 
 ### Bug Fixes
