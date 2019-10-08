@@ -1,3 +1,20 @@
+## 1.2.3 (2019-10-08)
+
+### Chores
+
+
+#### bump [@sealsystems](https://github.com/sealsystems)/log from 2.1.0 to 2.2.0 ([cf8116e](https://github.com/sealsystems/node-assert-mongo-error/commit/cf8116e))
+
+Bumps [@sealsystems/log](https://github.com/sealsystems/node-log) from 2.1.0 to 2.2.0.
+- [Release notes](https://github.com/sealsystems/node-log/releases)
+- [Changelog](https://github.com/sealsystems/node-log/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/sealsystems/node-log/compare/2.1.0...2.2.0)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+
+---
+
 ## 1.2.2 (2019-10-05)
 
 ### Chores
