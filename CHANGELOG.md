@@ -1,3 +1,14 @@
+## 1.2.4 (2020-03-09)
+
+### Chores
+
+
+#### yoed ([7cf53cf](https://github.com/sealsystems/node-assert-mongo-error/commit/7cf53cf))
+
+
+
+---
+
 ## 1.2.3 (2019-10-08)
 
 ### Chores
