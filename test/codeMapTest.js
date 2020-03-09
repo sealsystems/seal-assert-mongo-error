@@ -31,6 +31,7 @@ suite('codeMap', () => {
   });
 
   test('updates map with new error code list', (done) => {
+    // eslint-disable-next-line global-require
     const mockedCodeMap = require('../lib/codeMap');
 
     assert.that(mockedCodeMap.update([99, 42])).is.null();
@@ -42,7 +43,7 @@ suite('codeMap', () => {
     const updateError = codeMap.update(['hugo']);
 
     assert.that(updateError).is.ofType('object');
-    assert.that(updateError.message).is.equalTo('Not a number: \'hugo\'');
+    assert.that(updateError.message).is.equalTo("Not a number: 'hugo'");
     done();
   });
 });
