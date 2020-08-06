@@ -1,3 +1,17 @@
+## 1.3.0 (2020-08-06)
+
+### Chores
+
+
+bump [@sealsystems](https://github.com/sealsystems)/log from 2.2.0 to 2.2.1 ([#109](https://github.com/sealsystems/node-assert-mongo-error/issues/109)) ([fad3cb1](https://github.com/sealsystems/node-assert-mongo-error/commit/fad3cb1))
+
+bump [@sealsystems](https://github.com/sealsystems)/log from 2.2.1 to 2.2.2 ([#111](https://github.com/sealsystems/node-assert-mongo-error/issues/111)) ([6652a4d](https://github.com/sealsystems/node-assert-mongo-error/commit/6652a4d))
+
+### Features
+
+
+test for MongoServerSelectionError too ([54a5f23](https://github.com/sealsystems/node-assert-mongo-error/commit/54a5f23))
+
 ## 1.2.4 (2020-03-09)
 
 ### Chores
