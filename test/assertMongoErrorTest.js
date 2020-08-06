@@ -68,6 +68,25 @@ suite('assertMongoError', () => {
     throw new Error('X');
   });
 
+  test('calls exit on MongoServerSelectionError error', (done) => {
+    const testError = new Error('böser fehler');
+
+    testError.name = 'MongoServerSelectionError';
+
+    const origExit = process.exit;
+
+    process.exit = (code) => {
+      process.exit = origExit;
+      assert.that(code).is.equalTo(1);
+      assert.that(codeUpdateCalled).is.equalTo(0);
+      done();
+    };
+
+    assertMongoError.assert(testError);
+    process.exit = origExit;
+    throw new Error('X');
+  });
+
   test('is not throwing an error if code is not in list', (done) => {
     const testError = new Error('test error');
 
