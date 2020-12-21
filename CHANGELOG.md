@@ -1,3 +1,10 @@
+## 1.3.1 (2020-12-21)
+
+### Chores
+
+
+Trigger release ([e7d2bbb](https://github.com/sealsystems/node-assert-mongo-error/commit/e7d2bbb))
+
 ## 1.3.0 (2020-08-06)
 
 ### Chores
