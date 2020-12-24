@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sealsystems/node-assert-mongo-error.git"
+    "url": "https://github.com/sealsystems/assert-mongo-error"
   },
   "release": {
     "extends": "@sealsystems/semantic-release/node-module"
