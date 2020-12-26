@@ -1,3 +1,12 @@
+## 1.3.2 (2020-12-26)
+
+### Chores
+
+
+Update build configuration ([e80a5a3](https://github.com/sealsystems/node-assert-mongo-error/commit/e80a5a3))
+
+Update build configuration ([918aa7c](https://github.com/sealsystems/node-assert-mongo-error/commit/918aa7c))
+
 ## 1.3.1 (2020-12-21)
 
 ### Chores
