@@ -1,3 +1,10 @@
+## 1.3.3 (2021-01-16)
+
+### Chores
+
+
+Update build config ([cdfe609](https://github.com/sealsystems/node-assert-mongo-error/commit/cdfe609))
+
 ## 1.3.2 (2020-12-26)
 
 ### Chores
