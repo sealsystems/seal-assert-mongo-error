@@ -1,3 +1,10 @@
+## 1.3.5 (2021-01-17)
+
+### Chores
+
+
+bump node-fetch from 2.6.0 to 2.6.1 ([d697da2](https://github.com/sealsystems/node-assert-mongo-error/commit/d697da2))
+
 ## 1.3.4 (2021-01-17)
 
 ### Chores
